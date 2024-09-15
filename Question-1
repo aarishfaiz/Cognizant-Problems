@@ -1,0 +1,12 @@
+class Solution{
+    public int getXor(int[] nums, int a, int b){
+       int ans=nums[a];
+       
+       for(int i=a+1;i<=b;i++) {
+           ans ^= nums[i];
+       }
+        return ans;
+    }
+}
+
+//https://www.geeksforgeeks.org/problems/xor-of-a-given-range/0
