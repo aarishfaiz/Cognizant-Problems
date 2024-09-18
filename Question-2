@@ -1,0 +1,30 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    public static void fuelConsumption(double fuel, double distance) {
+       if(fuel < 0 || distance < 0) {
+           System.out.println("Provide Value is Not enough");
+       }else {
+           double consumption = (fuel/distance) * 100;
+           
+            System.out.printf("Fuel consumption: %.2f liters/100KM\n", consumption);
+           
+           
+           double miles = distance * 0.6214;
+           double gallon = fuel * 0.2642;
+           
+           double milesPerGallon = miles/ gallon;
+           
+            System.out.printf("Miles per Gallon: %.2f\n", milesPerGallon);
+       }
+        
+     }
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	   fuelConsumption(20, 150);
+
+	}
+}
