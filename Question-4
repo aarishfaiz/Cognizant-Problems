@@ -1,0 +1,22 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    public static void charToAsci(String s) {
+        for(int i=0;i<s.length();i+=2) {
+            String digit = s.substring(i, i+2);
+            int asciValue = Integer.parseInt(digit);
+            
+            char character = (char)(asciValue);
+            
+            System.out.println(asciValue + ":" + character);
+        }
+    }
+	public static void main (String[] args) throws java.lang.Exception
+	{
+        charToAsci("65666768");
+
+	}
+}
