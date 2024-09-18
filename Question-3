@@ -1,0 +1,26 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    
+    public static void generateBill(int pizza, int puff, int coldDrinks) {
+        int pricePizza = pizza * 100;
+        int pricePuff = puff * 20;
+        int priceColdDrink = coldDrinks * 10;
+        int totalPrice  = pricePizza + pricePuff + priceColdDrink;
+        
+        System.out.println("No. of Pizza: "+ pizza);
+        System.out.println("No. of Puff: "+ puff);
+        System.out.println("No. of Cold Drink: "+ coldDrinks);
+        
+        System.out.println("Total Price : " + totalPrice);
+        
+    }
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		generateBill(10, 12, 5);
+
+	}
+}
