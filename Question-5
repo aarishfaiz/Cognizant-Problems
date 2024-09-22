@@ -1,0 +1,33 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    public static void maxPlacementOfDepartment(int cse, int mech, int ece) {
+
+        if (cse < 0 || mech < 0 || ece < 0) {
+            System.out.println("Input is Invalid");
+            return;
+        }
+
+        else if (cse == mech && mech == ece) {
+            System.out.println("All are equal");
+        }
+
+
+        else if (cse > mech && cse > ece) {
+            System.out.println("CSE");
+        } else if (mech > cse && mech > ece) {
+            System.out.println("MECH");
+        } else {
+            System.out.println("ECE");
+        }
+
+    }
+    public static void main(String[] args) throws java.lang.Exception
+    {
+        maxPlacementOfDepartment(200, 200, 300);
+
+    }
+}
