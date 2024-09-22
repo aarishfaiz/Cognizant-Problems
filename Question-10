@@ -1,0 +1,22 @@
+import java.util.*;
+
+class solution {
+      public static int salaryInce(int salary, int rating) {
+        if(rating < 1 || rating > 5) {
+            return -1;
+        }
+        int incrementalSalary = salary;
+        
+        if(rating >= 1 && rating <= 3) {
+            incrementalSalary += salary*0.1;
+        }else if(rating >= 3.1 && rating < 4) {
+            incrementalSalary += salary*0.25;
+        }else {
+            incrementalSalary += salary*0.3;
+        }
+        return incrementalSalary;
+    }
+    public static void main(String [] args) {
+        System.out.println(salaryInce(8000, 3));
+    }
+}
