@@ -1,0 +1,27 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    
+    // IMP
+    public static String palindrome(int n) {
+        String originalNumber = Integer.toString(n);
+        StringBuilder reverseNumber = new StringBuilder(originalNumber);
+        
+        reverseNumber.reverse();  
+        
+        
+        if (reverseNumber.toString().equals(originalNumber)) {
+            return "Palindrome";
+        } else {
+            return "Not Palindrome";
+        }
+    }
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		System.out.println(palindrome(44244));
+
+	}
+}
