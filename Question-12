@@ -1,0 +1,30 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    public static String availableCourse(int numberOfCourse, String course) {
+        if(numberOfCourse > 20) return "Invalid case";
+        String[] courses = {
+            "Java",
+            "Oracle",
+            "C++",
+            "Mysql",
+            "Dotnet"
+        };
+        
+        for(int i=0;i<courses.length;i++) {
+            if(courses[i].equals(course)) {
+                return course;
+            }
+        }
+        
+        return "Course is Not available";
+    }
+    public static void main(String[] args) throws java.lang.Exception
+    {
+        System.out.println(availableCourse(2,"Java"));
+
+    }
+}
