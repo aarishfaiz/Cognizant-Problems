@@ -1,0 +1,27 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    public static String validPlate(int n) {
+        if(n<0 ) return "Invalid Input";
+        int sum=0;
+        while(n>0) {
+            int digit = n%10;
+            sum += digit;
+            n = n/10;
+        }
+        
+        if(sum%3 == 0 || sum%5==0 || sum%7 == 0) {
+            return "Lucky Number";
+        }
+        return "Not Lucky Number";
+     }
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		System.out.println(validPlate(1234
+		));
+
+	}
+}
