@@ -1,0 +1,28 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    public static String seasonMonth(int n) {
+        if (n < 1 || n > 12) return "Invalid Month";
+        String ans = "";
+
+        if (n == 12 || n == 1 || n == 2) {
+            ans = "Winter";
+        } else if (n == 3 || n == 4 || n == 5) {
+            ans = "Spring";
+        } else if (n == 6 || n == 7 || n == 8) {
+            ans = "Summer";
+        } else {
+            ans = "Autumn";
+        }
+
+        return ans;
+    }
+    public static void main(String[] args) throws java.lang.Exception
+    {
+        System.out.println(seasonMonth(3));
+
+    }
+}
