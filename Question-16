@@ -1,0 +1,30 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    public static int bestTimetoBuyStock(int[] arr) {
+        int maxProfit = 0;
+        int min = Integer.MAX_VALUE;
+
+        for (int i = 0; i < arr.length; i++) {
+            min = Math.min(min, arr[i]);
+            maxProfit = Math.max(maxProfit, arr[i] - min);
+        }
+        return maxProfit;
+    }
+    public static void main(String[] args) throws java.lang.Exception
+    {
+        int[] stockPrices = {
+            7,
+            1,
+            5,
+            3,
+            6,
+            4
+        };
+        System.out.println(bestTimetoBuyStock(stockPrices));
+
+    }
+}
