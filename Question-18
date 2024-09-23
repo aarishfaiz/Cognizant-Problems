@@ -1,0 +1,33 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    
+    public static int reminderByNum(String str) {
+        int reminder = 0;
+        
+        for(int i=0;i<str.length();i++) {
+            int digit = str.charAt(i) - '0';
+            
+            if(i%2 == 0) {
+                reminder += digit;
+            }else {
+                reminder -= digit;
+            }
+        }
+        
+        reminder = reminder % 11;
+        
+        // if(reminder < 0) {
+        //     reminder += 11;
+        // }
+        return reminder;
+    }
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	 System.out.println(reminderByNum("13589234356546756"));
+
+	}
+}
