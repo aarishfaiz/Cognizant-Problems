@@ -1,0 +1,31 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    //IMP
+    public static int maxBulb(int n, int [] arr) {
+        int currBulb = 0;
+        int maxBulb = 0;
+        
+        for(int i=0;i<arr.length;i++) {
+            currBulb = arr[i];
+            int totalBulb = currBulb;
+            
+            for(int j=i+1;j<arr.length && arr[j] == currBulb; j++) {
+                totalBulb += currBulb;
+                i=j;
+            }
+            
+            maxBulb = Math.max(maxBulb, totalBulb);
+        }
+        return maxBulb;
+    }
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	    int [] arr = {1,2,3};
+		System.out.println(maxBulb(3,arr));
+
+	}
+}
