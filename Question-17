@@ -1,0 +1,30 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    public static int reverseDigit(int n) {
+
+        StringBuilder reverseNumber = new StringBuilder();
+
+        while (n > 0) {
+            int digit = n % 10;
+            reverseNumber.append(digit);
+            n = n / 10;
+        }
+
+        int num = Integer.parseInt(reverseNumber.toString());
+
+        if (num > Integer.MAX_VALUE || num < Integer.MIN_VALUE) {
+            return -1;
+        }
+
+        return num;
+    }
+    public static void main(String[] args) throws java.lang.Exception
+    {
+        System.out.println(reverseDigit(12));
+
+    }
+}
