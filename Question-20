@@ -1,0 +1,36 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    public static int sumLastRowAndCol(int [][] mat) {
+        int row = mat.length;
+        int col = mat[0].length;
+        int sum=0;
+        
+        for(int i=0;i<col;i++){
+            sum+=mat[row-1][i];
+        }
+        for(int j=0;j<row-1;j++) {
+            sum+=mat[j][col-1];
+        }
+        
+        return sum;
+    }
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	    Scanner sc = new Scanner(System.in);
+	    
+		int [][] mat = new int[3][3];
+		
+		for(int i=0;i<3;i++) {
+		    for(int j=0;j<3;j++) {
+		        mat[i][j] = sc.nextInt();
+		    }
+		}
+		
+		System.out.println(sumLastRowAndCol(mat));
+
+	}
+}
