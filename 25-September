@@ -4,39 +4,71 @@ import java.io.*;
 
 class Codechef
 {
-    
+    public static int maxDifficulty(int[] arr) {
+        Arrays.sort(arr);
+
+        int i = 0;
+        int j = arr.length - 1;
+
+        int maxi = Integer.MIN_VALUE;
+
+        while (i < j) {
+            int sum = arr[i] + arr[j];
+
+            maxi = Math.max(maxi, sum);
+
+            i++;
+            j--;
+        }
+
+        return maxi;
+    }
+
     public static int factorial(int n) {
-        int i=1;
+        int i = 1;
         int ans = 1;
-        while(i<=n) {
+        while (i <= n) {
             ans *= i;
             i++;
         }
-        
+
         return ans;
     }
     public static int permutation(String s) {
         String vowel = "AEIOUaeiou";
-        int consonantCount=s.length();
-        
-        for(char ch: s.toCharArray()) {
-            if(vowel.indexOf(ch) != -1) {
+        int consonantCount = s.length();
+
+        for (char ch: s.toCharArray()) {
+            if (vowel.indexOf(ch) != -1) {
                 consonantCount--;
                 System.out.println(consonantCount);
             }
-            
+
         }
-         if (consonantCount <= 0) {
+        if (consonantCount <= 0) {
             return 0;
         }
-        
-     return factorial(consonantCount);
-    }
-	public static void main (String[] args) throws java.lang.Exception
-	{
-	    String s = "ABCD";
-	    
-	    System.out.println(permutation(s));
 
-	}
+        return factorial(consonantCount);
+    }
+    public static void main(String[] args) throws java.lang.Exception
+    {
+
+        String s = "ABCD";
+
+        System.out.println(permutation(s));
+
+
+        int a[] = {
+            3,
+            5,
+            2,
+            3,
+            8,
+            7
+        };
+
+        System.out.println(maxDifficulty(a));
+
+    }
 }
