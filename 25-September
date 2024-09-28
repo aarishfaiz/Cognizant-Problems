@@ -1,0 +1,42 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    
+    public static int factorial(int n) {
+        int i=1;
+        int ans = 1;
+        while(i<=n) {
+            ans *= i;
+            i++;
+        }
+        
+        return ans;
+    }
+    public static int permutation(String s) {
+        String vowel = "AEIOUaeiou";
+        int consonantCount=s.length();
+        
+        for(char ch: s.toCharArray()) {
+            if(vowel.indexOf(ch) != -1) {
+                consonantCount--;
+                System.out.println(consonantCount);
+            }
+            
+        }
+         if (consonantCount <= 0) {
+            return 0;
+        }
+        
+     return factorial(consonantCount);
+    }
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	    String s = "ABCD";
+	    
+	    System.out.println(permutation(s));
+
+	}
+}
